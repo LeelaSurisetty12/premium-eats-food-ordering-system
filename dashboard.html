@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Premium Eats</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="View our premium menu items">
+</head>
+<body>
+
+    <header>
+        <h1 id="welcomeMsg">Welcome</h1>
+        <a href="cart.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            View Cart
+        </a>
+    </header>
+
+    <div class="search-container" style="max-width: 800px; margin: 30px auto -10px auto; padding: 0 5%;">
+        <input type="text" id="searchInput" onkeyup="searchFood()" placeholder="🔍 Search for mouth-watering food..." class="glass-panel" style="width: 100%; padding: 15px 20px; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--glass-bg); color: var(--text-color); font-size: 16px; outline: none;">
+    </div>
+
+    <section class="menu">
+
+        <div class="card glass-panel">
+            <img src="burger.png" alt="Premium Burger">
+            <h2>Gourmet Burger</h2>
+            <p>₹120</p>
+            <button onclick="addToCart('Gourmet Burger', 120)">Add to Cart</button>
+        </div>
+
+        <div class="card glass-panel">
+            <img src="pizza.png" alt="Premium Pizza">
+            <h2>Wood-Fired Pizza</h2>
+            <p>₹250</p>
+            <button onclick="addToCart('Wood-Fired Pizza', 250)">Add to Cart</button>
+        </div>
+
+        <div class="card glass-panel">
+            <img src="pasta.png" alt="Premium Pasta">
+            <h2>Creamy Penne Pasta</h2>
+            <p>₹180</p>
+            <button onclick="addToCart('Creamy Penne Pasta', 180)">Add to Cart</button>
+        </div>
+
+    </section>
+
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
